@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- my css -->
+    <link rel="stylesheet" href="./output.css">
+</head>
+
+<body>
+    <header>
+        <nav class="border-gray-200 dark:bg-gray-900">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse xl:text-4xl font-bold">
+                    Base
+                </a>
+                <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                    <button class="px-4 py-2 rounded-3xl">
+                        Sign In
+                    </button>
+                    <button class="px-4 py-2 rounded-3xl bg-blue-500 text-white">
+                        Sign Up
+                    </button>
+                    <button data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-cta" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                    <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                        <li>
+                            <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Features</a>
+                        </li>
+                        <li>
+                            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Pages 
+                                <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                                </svg>
+                            </button>                            
+                        </li>
+                        <li>
+                            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Support</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Dropdown menu -->
+            <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownLargeButton">
+                    <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Blog Grid</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Blog Single</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign In</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign Up</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">404</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero-banner">
+        <div class="container mx-auto">
+            <div class="hero-banner-content flex justify-between items-center">
+                <!-- Text -->
+                <div class="content-text w-3/5 space-y-4">
+                    <h1 class="xl:text-6xl font-bold">We specialize in UI/UX, Web Development, Digital Marketing.</h1>
+                    <p class="text-black text-opacity-40">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla magna mauris. Nulla fermentum viverra sem eu rhoncus consequat varius nisi quis, posuere magna.</p>
+                    <button class="px-4 py-2 rounded-3xl bg-blue-500 text-white">Get Started Now</button>
+                    <p>Call us (0123) 456 – 789</p>
+                    <p class="text-black text-opacity-40">For any question or concern</p>
+                </div>
+                <!-- Img -->
+                <div class="content-image w-2/5">
+                    <img class="w-full" src="./img/hero.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="lorem">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <!-- 24/7 Support -->
+            <div>
+                <div class="w-16 h-16 mx-auto bg-pink-500 text-white flex items-center justify-center rounded-full mb-4">
+                    <i class="fa-solid fa-info"></i>
+                </div>
+                <h2>24/7 Support</h2>
+                <p>Lorem ipsum dolor sit amet conse adipiscing elit.</p>
+            </div>
+            <!-- Take Ownership -->
+            <div>
+                <div class="w-16 h-16 mx-auto bg-green-500 text-white flex items-center justify-center rounded-full mb-4">
+                    <i class="fa-solid fa-earth-asia"></i>
+                </div>
+                <h2>Take Ownership</h2>
+                <p>Lorem ipsum dolor sit amet conse adipiscing elit.</p>
+            </div>
+            <!-- Team Work -->
+            <div>
+                <div class="w-16 h-16 mx-auto bg-orange-500 text-white flex items-center justify-center rounded-full mb-4">
+                    <i class="fa-solid fa-people-group"></i>
+                </div>
+                <h2>Team Work</h2>
+                <p>Lorem ipsum dolor sit amet conse adipiscing elit.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="best">
+        <div class="container mx-auto">
+            <div class="hero-banner-content flex flex-col lg:flex-row justify-between items-center gap-8">
+                <!-- Img -->
+                <div class="content-image w-full lg:w-2/5">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img class="w-full rounded-lg" src="./img/about-01.png" alt="">
+                        <img class="w-full rounded-lg" src="./img/about-03.png" alt="">
+                        <img class="w-full rounded-lg" src="./img/about-02.png" alt="">
+                    </div>
+                </div>
+                <!-- Text -->
+                <div class="content-text w-full lg:w-3/5 text-center lg:text-left space-y-4">
+                    <p class="text-blue-500 font-medium">Why Choose Us</p>
+                    <h1 class="text-2xl lg:text-4xl font-bold text-gray-900">
+                        We Make Our customers happy by giving Best services.
+                    </h1>
+                    <p class="text-gray-600">
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.
+                    </p>
+                    <div class="flex justify-center lg:justify-start items-center gap-4">
+                        <button class="px-4 py-2 rounded-3xl bg-blue-500 text-white">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                        <p>SEE HOW WE WORK</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Meet With Our Creative Dedicated Team</h2>
+            <p class="text-gray-600 mb-8">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Team Member 1 -->
+                <div class="group relative overflow-hidden rounded-lg bg-white shadow-md p-6">
+                    <img class="w-32 h-32 mx-auto rounded-3xl mb-4" src="./img/team-01.png" alt="">
+                    <h3 class="text-lg font-semibold text-center">Olivia Andrium</h3>
+                    <p class="text-gray-500 text-center mb-4">Product Manager</p>
+                    <!-- Icon -->
+                    <div class="absolute inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <a href="#" class="text-white text-xl mx-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white text-xl mx-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white text-xl mx-2"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <!-- Team Member 2 -->
+                <div class="group relative overflow-hidden rounded-lg bg-white shadow-md p-6">
+                    <img class="w-32 h-32 mx-auto rounded-3xl mb-4" src="./img/team-02.png" alt="">
+                    <h3 class="text-lg font-semibold text-center">Jemse Kemorun</h3>
+                    <p class="text-gray-500 text-center mb-4">Product Designer</p>
+                    <!-- Icon -->
+                    <div class="absolute inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <a href="#" class="text-white text-xl mx-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white text-xl mx-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white text-xl mx-2"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <!-- Team Member 3 -->
+                <div class="group relative overflow-hidden rounded-lg bg-white shadow-md p-6">
+                    <img class="w-32 h-32 mx-auto rounded-3xl mb-4" src="./img/team-03.png" alt="">
+                    <h3 class="text-lg font-semibold text-center">Avi Pestarica</h3>
+                    <p class="text-gray-500 text-center mb-4">Web Designer</p>
+                    <!-- Icon -->
+                    <div class="absolute inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <a href="#" class="text-white text-xl mx-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white text-xl mx-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white text-xl mx-2"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>          
+    </section>
+
+    <section class="service">
+        <div class="py-16 bg-white text-center">
+            <h2 class="text-4xl font-bold text-gray-800 mb-6">We Offer The Best Quality Service for You</h2>
+            <p class="text-gray-500 mb-12">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Card 1 -->
+                <div class="p-6 bg-gray-50 rounded-lg shadow hover:shadow-lg transition">
+                    <i class="w-8 h-8 text-blue-500 fa-solid fa-chart-simple"></i>
+                    <h2 class="text-xl font-semibold text-gray-800 mb-2">Crafted for Startups</h2>
+                    <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="p-6 bg-gray-50 rounded-lg shadow hover:shadow-lg transition">
+                    <i class="w-8 h-8 text-blue-500 fa-solid fa-database"></i>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">High-quality Design</h3>
+                    <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="p-6 bg-gray-50 rounded-lg shadow hover:shadow-lg transition">
+                    <i class="w-8 h-8 text-blue-500 fa-solid fa-newspaper"></i>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Speed Optimized</h3>
+                    <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="p-6 bg-gray-50 rounded-lg shadow hover:shadow-lg transition">
+                    <i class="w-8 h-8 text-blue-500 fa-solid fa-gauge"></i>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Fully Customizable</h3>
+                    <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="p-6 bg-gray-50 rounded-lg shadow hover:shadow-lg transition">
+                    <i class="w-8 h-8 text-blue-500 fa-solid fa-database"></i>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">All Essential Sections</h3>
+                    <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <!-- Card 6 -->
+                <div class="p-6 bg-gray-50 rounded-lg shadow hover:shadow-lg transition">
+                    <i class="w-8 h-8 text-blue-500 fa-solid fa-newspaper"></i>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Regular Updates</h3>
+                    <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="prices">
+        <div class="text-center mb-8">
+            <h2 class="text-3xl font-bold">We Offer Great Affordable Premium Prices.</h2>
+            <p class="text-gray-500 mt-2">
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+            </p>
+        </div>
+    
+        <!-- Toggle button -->
+        <div class="flex justify-center items-center mb-12">
+            <label class="inline-flex items-center cursor-pointer">
+                <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Bill Monthly</span>
+                <input type="checkbox" value="" class="sr-only peer" checked>
+                <div class="relative w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600"></div>
+                <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Bill Annually</span>
+            </label>
+        </div>
+    
+        <!-- Pricing Plans -->
+        <div class="grid gap-6 sm:grid-cols-3">
+            <!-- Monthly Plans -->
+            <div class="plan-monthly p-6 bg-white rounded-lg shadow-md text-center peer-checked:hidden">
+                <h3 class="text-xl font-bold mb-4">Starter</h3>
+                <p class="text-4xl font-extrabold mb-2">$29</p>
+                <p class="text-gray-500 mb-4">/per month</p>
+                <ul class="mb-6 text-sm text-gray-500">
+                    <li>400 GB Storage</li>
+                    <li>Unlimited Photos & Videos</li>
+                    <li>Exclusive Support</li>
+                </ul>
+                <a href="#" class="inline-block px-6 py-2 text-white bg-pink-500 rounded hover:bg-blue-600">Try for free</a>
+                <p class="text-sm mt-2 text-gray-400">7-day free trial</p>
+            </div>
+            <div class="plan-monthly p-6 bg-white rounded-lg shadow-md text-center peer-checked:hidden">
+                <h3 class="text-xl font-bold mb-4">Growth Plan</h3>
+                <p class="text-4xl font-extrabold mb-2">$59</p>
+                <p class="text-gray-500 mb-4">/per month</p>
+                <ul class="mb-6 text-sm text-gray-500">
+                    <li>400 GB Storage</li>
+                    <li>Unlimited Photos & Videos</li>
+                    <li>Exclusive Support</li>
+                </ul>
+                <a href="#" class="inline-block px-6 py-2 text-white bg-blue-500 rounded hover:bg-blue-600">Try for free</a>
+                <p class="text-sm mt-2 text-gray-400">7-day free trial</p>
+            </div>
+            <div class="plan-monthly p-6 bg-white rounded-lg shadow-md text-center peer-checked:hidden">
+                <h3 class="text-xl font-bold mb-4">Business</h3>
+                <p class="text-4xl font-extrabold mb-2">$139</p>
+                <p class="text-gray-500 mb-4">/per month</p>
+                <ul class="mb-6 text-sm text-gray-500">
+                    <li>400 GB Storage</li>
+                    <li>Unlimited Photos & Videos</li>
+                    <li>Exclusive Support</li>
+                </ul>
+                <a href="#" class="inline-block px-6 py-2 text-white bg-pink-500 rounded hover:bg-blue-600">Try for free</a>
+                <p class="text-sm mt-2 text-gray-400">7-day free trial</p>
+            </div>
+    
+            <!-- Annual Plans -->
+            <div class="plan-annually hidden peer-checked:block p-6 bg-white rounded-lg shadow-md text-center">
+                <h3 class="text-xl font-bold mb-4">Starter</h3>
+                <p class="text-4xl font-extrabold mb-2">$149</p>
+                <p class="text-gray-500 mb-4">/per year</p>
+                <ul class="mb-6 text-sm text-gray-500">
+                    <li>400 GB Storage</li>
+                    <li>Unlimited Photos & Videos</li>
+                    <li>Exclusive Support</li>
+                </ul>
+                <a href="#" class="inline-block px-6 py-2 text-white bg-pink-500 rounded hover:bg-blue-600">Try for free</a>
+                <p class="text-sm mt-2 text-gray-400">7-day free trial</p>
+            </div>
+            <div class="plan-annually hidden peer-checked:block p-6 bg-white rounded-lg shadow-md text-center">
+                <h3 class="text-xl font-bold mb-4">Growth Plan</h3>
+                <p class="text-4xl font-extrabold mb-2">$608</p>
+                <p class="text-gray-500 mb-4">/per year</p>
+                <ul class="mb-6 text-sm text-gray-500">
+                    <li>400 GB Storage</li>
+                    <li>Unlimited Photos & Videos</li>
+                    <li>Exclusive Support</li>
+                </ul>
+                <a href="#" class="inline-block px-6 py-2 text-white bg-blue-500 rounded hover:bg-blue-600">Try for free</a>
+                <p class="text-sm mt-2 text-gray-400">7-day free trial</p>
+            </div>
+            <div class="plan-annually hidden peer-checked:block p-6 bg-white rounded-lg shadow-md text-center">
+                <h3 class="text-xl font-bold mb-4">Business</h3>
+                <p class="text-4xl font-extrabold mb-2">$1568</p>
+                <p class="text-gray-500 mb-4">/per year</p>
+                <ul class="mb-6 text-sm text-gray-500">
+                    <li>400 GB Storage</li>
+                    <li>Unlimited Photos & Videos</li>
+                    <li>Exclusive Support</li>
+                </ul>
+                <a href="#" class="inline-block px-6 py-2 text-white bg-pink-500 rounded hover:bg-blue-600">Try for free</a>
+                <p class="text-sm mt-2 text-gray-400">7-day free trial</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="premium">
+        <div class="container mx-auto">
+            <!-- Title -->
+            <div class="premium_title text-center mb-8">
+                <h2 class="text-2xl md:text-4xl font-bold">We Offer Great Affordable Premium Prices.</h2>
+                <p class="text-gray-500 mt-4">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.</p>
+            </div>
+            
+            <!-- Tabs -->
+            <div class="mb-6 border-b border-gray-200">
+                <ul class="flex flex-wrap justify-center text-sm font-medium text-center" id="tabs" role="tablist">
+                    <li class="mr-4" role="presentation">
+                        <button class="p-3 border-b-2 rounded-t-lg focus:border-blue-500 focus:text-blue-500" id="all-tab" data-tabs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">All</button>
+                    </li>
+                    <li class="mr-4" role="presentation">
+                        <button class="p-3 border-b-2 rounded-t-lg hover:text-gray-600" id="branding-tab" data-tabs-target="#branding_strategy" type="button" role="tab" aria-controls="branding_strategy" aria-selected="false">Branding Strategy</button>
+                    </li>
+                    <li class="mr-4" role="presentation">
+                        <button class="p-3 border-b-2 rounded-t-lg hover:text-gray-600" id="digital-tab" data-tabs-target="#digital_experiences" type="button" role="tab" aria-controls="digital_experiences" aria-selected="false">Digital Experiences</button>
+                    </li>
+                    <li role="presentation">
+                        <button class="p-3 border-b-2 rounded-t-lg hover:text-gray-600" id="ecommerce-tab" data-tabs-target="#ecommerce" type="button" role="tab" aria-controls="ecommerce" aria-selected="false">Ecommerce</button>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Tab Contents -->
+            <div id="tabs-content">
+                <!-- All -->
+                <div class="hiden p-4 rounded-lg" id="all" role="tabpanel" aria-labelledby="all-tab">
+                    <div class="grid grid-cols-2 gap-5">
+                        <img src="./img/project-01.png" class="w-full rounded-lg" alt="Project 1">
+                        <img src="./img/project-02.png" class="w-full rounded-lg" alt="Project 2">
+                        <img src="./img/project-03.png" class="w-full rounded-lg" alt="Project 3">
+                        <img src="./img/project-04.png" class="w-full rounded-lg" alt="Project 4">
+                    </div>
+                </div>
+                <!-- Branding Strategy -->
+                <div class="hiden p-4 rounded-lg" id="branding_strategy" role="tabpanel" aria-labelledby="branding-tab">
+                    <div class="grid grid-cols-2 gap-5">
+                        <img src="./img/project-01.png" class="w-full rounded-lg" alt="Project 1">
+                        <img src="./img/project-04.png" class="w-full rounded-lg" alt="Project 4">
+                    </div>
+                </div>
+                <!-- Digital Experiences -->
+                <div class="hiden p-4 rounded-lg" id="digital_experiences" role="tabpanel" aria-labelledby="digital-tab">
+                    <div class="grid grid-cols-2 gap-5">
+                        <img src="./img/project-02.png" class="w-full rounded-lg" alt="Project 2">
+                        <img src="./img/project-03.png" class="w-full rounded-lg" alt="Project 3">
+                    </div>
+                </div>
+                <div class="hiden p-4 rounded-lg" id="ecommerce" role="tabpanel" aria-labelledby="ecommerce-tab">
+                    <div class="grid grid-cols-2 gap-5">
+                        <img src="./img/project-01.png" class="w-full rounded-lg" alt="Project 1">
+                        <img src="./img/project-03.png" class="w-full rounded-lg" alt="Project 3">
+                        <img src="./img/project-04.png" class="w-full rounded-lg" alt="Project 4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="client">
+        <div class="max-w-4xl mx-auto py-12 text-center">
+            <h2 class="text-3xl font-bold mb-4">Client’s Testimonials</h2>
+            <p class="text-gray-500 mb-8">
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+            </p>
+            <div class="bg-white shadow-lg rounded-lg p-6 md:flex items-center">
+                <div class="mb-4 md:mb-0 md:mr-6">
+                <img class="w-20 h-20 rounded-full object-cover mx-auto" src="./img/testimonial.png" alt="Client Photo">
+            </div>
+            <div class="text-left">
+                <p class="text-gray-600 italic mb-4">
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dolor diam, feugiat quis enim sed, ullamcorper semper ligula."
+                </p>
+                <h3 class="font-bold text-gray-700">Devid Smith</h3>
+                <span class="text-sm text-gray-500">Founder @democompany</span>
+            </div>
+        </div>
+        <div class="flex justify-center space-x-4 mt-6">
+            <button class="p-2 rounded-full bg-gray-200 hover:bg-gray-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <button class="p-2 rounded-full bg-gray-200 hover:bg-gray-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <section class="number">
+        <div class="bg-gray-50 py-12">
+            <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <!-- Item 1 -->
+                <div>
+                    <h3 class="text-4xl font-bold text-gray-800">785</h3>
+                    <p class="text-gray-500">Global Brands</p>
+                </div>
+                <!-- Item 2 -->
+                <div>
+                    <h3 class="text-4xl font-bold text-gray-800">533</h3>
+                    <p class="text-gray-500">Happy Clients</p>
+                </div>
+                <!-- Item 3 -->
+                <div>
+                    <h3 class="text-4xl font-bold text-gray-800">865</h3>
+                    <p class="text-gray-500">Winning Award</p>
+                </div>
+                <!-- Item 4 -->
+                <div>
+                    <h3 class="text-4xl font-bold text-gray-800">346</h3>
+                    <p class="text-gray-500">Happy Clients</p>
+                </div>
+            </div>
+        </div>          
+    </section>
+
+    <section class="brands">
+        <div class="bg-white py-12">
+            <div class="max-w-4xl mx-auto text-center">
+                <!-- Heading -->
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Trusted by Global Brands</h2>
+                <p class="text-gray-500 mb-8">
+                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.
+                </p>
+                <!-- Brand Logos -->
+                <div class="grid grid-cols-3 sm:grid-cols-6 gap-6 items-center">
+                    <img class="h-10 mx-auto" src="./img/brand1.png" alt="">
+                    <img class="h-10 mx-auto" src="./img/brand2.png" alt="">
+                    <img class="h-10 mx-auto" src="./img/brand3.png" alt="">
+                    <img class="h-10 mx-auto" src="./img/brand4.png" alt="">
+                    <img class="h-10 mx-auto" src="./img/brand5.png" alt="">
+                    <img class="h-10 mx-auto" src="./img/brand6.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="blogs">
+        <div class="bg-gray-50 py-12">
+            <div class="max-w-6xl mx-auto text-center">
+                <!-- Heading -->
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Latest Blogs & News</h2>
+                <p class="text-gray-500 mb-8">
+                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.
+                </p>
+                <!-- Blog Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div class="relative group bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="relative">
+                            <img class="w-full h-48 object-cover" src="./img/blog-01.png" alt="">
+                            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <button class="px-4 py-2 bg-white text-black font-semibold rounded-lg shadow hover:bg-gray-200 transition">Read More</button>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center text-gray-500 text-sm mb-4">
+                                <span class="mr-4 flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.267c.969 0 1.371 1.24.588 1.81l-3.453 2.51a1 1 0 00-.364 1.118l1.286 3.957c.3.921-.755 1.688-1.539 1.118l-3.453-2.51a1 1 0 00-1.175 0l-3.453 2.51c-.784.57-1.838-.197-1.539-1.118l1.286-3.957a1 1 0 00-.364-1.118L2.903 8.384c-.783-.57-.38-1.81.588-1.81h4.267a1 1 0 00.95-.69l1.286-3.957z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Musharraf City
+                                </span>
+                                <span>25 Dec, 2025</span>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">
+                                Free advertising for your online business
+                            </h3>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="relative group bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="relative">
+                            <img class="w-full h-48 object-cover" src="./img/blog-02.png" alt="">
+                            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <button class="px-4 py-2 bg-white text-black font-semibold rounded-lg shadow hover:bg-gray-200 transition">
+                                    Read More
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center text-gray-500 text-sm mb-4">
+                                <span class="mr-4 flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.267c.969 0 1.371 1.24.588 1.81l-3.453 2.51a1 1 0 00-.364 1.118l1.286 3.957c.3.921-.755 1.688-1.539 1.118l-3.453-2.51a1 1 0 00-1.175 0l-3.453 2.51c-.784.57-1.838-.197-1.539-1.118l1.286-3.957a1 1 0 00-.364-1.118L2.903 8.384c-.783-.57-.38-1.81.588-1.81h4.267a1 1 0 00.95-.69l1.286-3.957z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Musharraf City
+                                </span>
+                                <span>25 Dec, 2025</span>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">
+                                9 simple ways to improve your design skills
+                            </h3>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="relative group bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="relative">
+                            <img class="w-full h-48 object-cover" src="./img/blog-03.png" alt="">
+                            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <button class="px-4 py-2 bg-white text-black font-semibold rounded-lg shadow hover:bg-gray-200 transition">
+                                    Read More
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center text-gray-500 text-sm mb-4">
+                                <span class="mr-4 flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.267c.969 0 1.371 1.24.588 1.81l-3.453 2.51a1 1 0 00-.364 1.118l1.286 3.957c.3.921-.755 1.688-1.539 1.118l-3.453-2.51a1 1 0 00-1.175 0l-3.453 2.51c-.784.57-1.838-.197-1.539-1.118l1.286-3.957a1 1 0 00-.364-1.118L2.903 8.384c-.783-.57-.38-1.81.588-1.81h4.267a1 1 0 00.95-.69l1.286-3.957z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Musharraf City
+                                </span>
+                                <span>25 Dec, 2025</span>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">
+                                Tips to quickly improve your coding speed.
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="connected">
+        <div class="bg-gray-50 py-10">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-gray-800">Let’s Stay Connected</h2>
+                    <p class="text-gray-600 mt-2">A reader will be distracted by readable content when looking at its layout.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- 左側：連絡情報 -->
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <ul class="space-y-4">
+                            <li>
+                                <p class="text-sm font-medium text-gray-500">Email Address</p>
+                                <p class="text-gray-800">support@startup.com</p>
+                            </li>
+                            <li>
+                                <p class="text-sm font-medium text-gray-500">Office Location</p>
+                                <p class="text-gray-800">78/A, Green Valley, California, USA</p>
+                            </li>
+                            <li>
+                                <p class="text-sm font-medium text-gray-500">Phone Number</p>
+                                <p class="text-gray-800">+009 8754 3433 223</p>
+                            </li>
+                            <li>
+                                <p class="text-sm font-medium text-gray-500">Social Media</p>
+                                <div class="flex space-x-4">
+                                    <a href="#" class="text-gray-500 hover:text-blue-500">Facebook</a>
+                                    <a href="#" class="text-gray-500 hover:text-blue-500">Twitter</a>
+                                    <a href="#" class="text-gray-500 hover:text-blue-500">LinkedIn</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 右側：連絡フォーム -->
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <form>
+                            <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+                                <div>
+                                    <label class="text-sm font-medium text-gray-600">Full Name</label>
+                                    <input type="text" placeholder="David Wonder" class="w-full mt-1 px-3 py-2 border rounded-md focus:ring focus:ring-blue-300" />
+                                </div>
+                                <div>
+                                    <label class="text-sm font-medium text-gray-600">Email Address</label>
+                                    <input type="email" placeholder="example@gmail.com" class="w-full mt-1 px-3 py-2 border rounded-md focus:ring focus:ring-blue-300" />
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <label class="text-sm font-medium text-gray-600">Message</label>
+                                <textarea placeholder="Your message" class="w-full mt-1 px-3 py-2 border rounded-md focus:ring focus:ring-blue-300"></textarea>
+                            </div>
+                            <button type="submit" class="mt-4 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="growing">
+        <div class="bg-blue-500 py-16 px-6">
+            <div class="max-w-6xl mx-auto text-center">
+                <h2 class="text-4xl font-bold text-white leading-snug">
+                    Join with 5000+ Startups<br>Growing with Base.
+                </h2>
+                <p class="mt-4 text-base text-blue-200 max-w-3xl mx-auto">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis nibh lorem. Duis sed odio lorem. In a efficitur leo. Ut venenatis rhoncus.
+                </p>
+                <div class="mt-8">
+                    <button class="bg-white text-blue-500 font-semibold py-3 px-8 rounded-full shadow-md hover:bg-gray-100 transition">
+                        Get Started Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-100 py-8">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
+            <!-- Brand and Description -->
+            <div class="col-span-1">
+                <div class="flex items-center space-x-2">
+                    <div class="bg-blue-500 p-2 rounded-full">
+                        <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h2 class="text-xl font-bold">Base</h2>
+                </div>
+                <p class="text-gray-500 mt-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+                <div class="flex space-x-4 mt-4">
+                    <a href="#" class="text-gray-500 hover:text-gray-700"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-500 hover:text-gray-700"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-500 hover:text-gray-700"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-gray-500 hover:text-gray-700"><i class="fab fa-behance"></i></a>
+                </div>
+            </div>
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-600 hover:text-gray-900">Home</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-gray-900">Product</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-gray-900 flex items-center">Careers<span class="ml-2 text-sm bg-green-500 text-white px-2 py-1 rounded-full">Hiring</span></a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-gray-900">Pricing</a></li>
+                </ul>
+            </div>
+            <!-- Services -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Services</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-600 hover:text-gray-900">Web Development</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-gray-900">Graphics Design</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-gray-900">Digital Marketing</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-gray-900">UI/UX Design</a></li>
+                </ul>
+            </div>
+            <!-- Support -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Support</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-600 hover:text-gray-900">Company</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-gray-900">Press Media</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-gray-900">Our Blog</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-gray-900">Contact Us</a></li>
+                </ul>
+            </div>
+            <!-- Newsletter -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Newsletter</h3>
+                <p class="text-gray-500 mb-4">Subscribe to receive future updates</p>
+                <form class="flex">
+                    <input type="email" placeholder="Email address" class="w-full px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none">
+                    <button class="px-4 bg-blue-500 text-white rounded-r-md hover:bg-blue-600">
+                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="mt-8 border-t border-gray-300 pt-4 text-center text-sm text-gray-500">
+            <div class="flex justify-center space-x-4">
+                <a href="#" class="hover:text-gray-900">English</a>
+                <a href="#" class="hover:text-gray-900">Privacy Policy</a>
+                <a href="#" class="hover:text-gray-900">Support</a>
+            </div>
+            <p class="mt-4">© 2025 Base. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./../node_modules/flowbite/dist/flowbite.min.js"></script>
+</body>
+</html>
